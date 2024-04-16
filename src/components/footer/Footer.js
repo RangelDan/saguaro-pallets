@@ -4,7 +4,8 @@ const Footer = () => (
       backgroundColor: '#333',
       color: 'white',
       textAlign: 'center',
-      padding: '20px'
+      padding: '20px',
+      boxSizing: 'border-box',
     }}>
       <a href="https://facebook.com" target="_blank" style={{ margin: '0 10px' }}>
         <img src="/facebook-icon.png" alt="Facebook" style={{ width: '24px', verticalAlign: 'middle' }} />

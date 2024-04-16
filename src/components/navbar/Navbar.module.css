@@ -1,62 +1,55 @@
-/* Navbar.css */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: #fff;
-    color: #333;
-    width: 100%;
-    position: relative;
-  }
-  
-  .navbar img {
-    height: 50px;
-    width: 150px;
-  }
-  
-  .navbar button.mobile-menu-button {
-    display: none; /* Hidden by default */
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: #0066A2;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box; /* Make sure padding is included in width */
+  position: relative;
+}
+
+/* .navbar img {
+  height: 50px;
+  width: 150px;
+} */
+
+.mobileMenuButton {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #0066A2;
+}
+
+.links, .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+@media (max-width: 768px) {
   .links, .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .buttons {
-    gap: 10px;
-  }
-  
-  .mobile-menu {
-    display: none; /* Initially hidden */
-  }
-  
-  @media (max-width: 768px) {
-    .links, .buttons {
       display: none; /* Hide desktop links and buttons on mobile */
-    }
-  
-    button.mobile-menu-button {
+  }
+
+  .mobileMenuButton {
       display: block; /* Show the menu toggle button */
-    }
-  
-    .mobile-menu {
+  }
+
+  .mobileMenu {
       display: block; /* Show mobile menu when menu is open */
       position: absolute;
       top: 60px;
       right: 0;
       background: white;
-      border: 1px solid #ddd;
+      border: 1px solid black;
       border-radius: 5px;
-      width: 100%;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
+      width: calc(100% - 40px); 
+      box-sizing: border-box; 
   }
-  
+}

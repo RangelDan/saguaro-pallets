@@ -3,7 +3,8 @@ const ContactForm = () => (
     <div style={{
       background: '#f8f8f8',
       padding: '20px',
-      textAlign: 'center'
+      textAlign: 'center',
+      boxSizing: 'border-box',
     }}>
       <h2>Contact Us</h2>
       <form action="/submit_form" method="POST" style={{ textAlign: 'center' }}>

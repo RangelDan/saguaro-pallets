@@ -4,9 +4,10 @@ const CenterTextSection = () => (
       textAlign: 'center',
       backgroundColor: '#fff',
       padding: '50px 20px',
-      width: '100%'
+      width: '100%',
+      boxSizing: 'border-box',
     }}>
-      <h2 style={{fontSize: '3rem'}}>About Our Products</h2>
+      <h2 style={{fontSize: '2.5rem'}}>About Our Products</h2>
       <h3 style={{fontSize: '1.5rem'}}>Durable & Reliable</h3>
       <p style={{fontSize: '18px'}}>Our pallets are designed to withstand the rigors of heavy use, ensuring longevity and reliability.</p>
       <hr />

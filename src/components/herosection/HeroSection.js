@@ -1,26 +1,26 @@
-// components/HeroSection.js
+import Image from 'next/image';
+import styles from './HeroSection.module.css';
+
 const HeroSection = () => (
-    <div style={{
-      background: "url('/loaded.jpg') no-repeat center center",
-      backgroundSize: 'cover',
-      backgroundColor: 'black',
-      color: '#fff',
-      textAlign: 'center',
-      padding: '100px 20px',
-      height: '40vh',
-      width: '100%'
-    }}>
-      <h1 style={{fontSize: '3rem', color: 'light grey'}}>Saguaro Pallets</h1>
-      <p style={{fontSize: '1.5rem', color: 'light grey'}}>High Quality • Sustainable • Affordable</p>
-      <button style={{
-        fontSize: '18px', 
-        color: 'light grey',
-        padding: '10px 20px' 
-        }}>
-          Learn More
-        </button>
+  <div className={styles.heroContainer}>
+    <div className={styles.backgroundImage}>
+      <Image
+        src="/loaded.jpg"
+        alt="Background"
+        layout="fill"
+        objectFit="cover"
+        priority 
+      />
     </div>
-  );
-  
-  export default HeroSection;
-  
+    
+    <div className={styles.contentLayer}>
+      <h1 className={styles.title}>Saguaro Pallets</h1>
+      <p className={styles.subtitle}>High Quality • Sustainable • Affordable</p>
+      <button className={styles.button}>
+        Learn More
+      </button>
+    </div>
+  </div>
+);
+
+export default HeroSection;

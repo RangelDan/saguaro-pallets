@@ -4,7 +4,8 @@ const ImageSection = () => (
       display: 'flex',
       flexWrap: 'wrap',
       padding: '20px',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      boxSizing: 'border-box',
     }}>
       <div style={{
         flex: '1 1 30%',
