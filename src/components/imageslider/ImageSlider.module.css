@@ -1,0 +1,19 @@
+/* ImageSlider.module.css */
+.sliderContainer {
+  position: relative;
+  padding: 20px;
+}
+
+.image {
+  width: 100%;
+  height: auto; /* Adjust the height automatically */
+}
+
+.viewGalleryLink {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+}

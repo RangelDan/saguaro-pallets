@@ -24,8 +24,8 @@ const Navbar = () => {
       </div>
 
       <div className={styles.buttons}>
-        <button style={{ background: '#0066A2', color: '#fff', border: 'none', padding: '8px 16px' }}>Call Now</button>
-        <button style={{ background: '#0066A2', color: '#fff', border: 'none', padding: '8px 16px' }}>Email</button>
+        <button style={{ background: '#0066A2', color: '#fff', border: 'none', padding: '8px 16px', margin: '0 5px' }}>Call Now</button>
+        <button style={{ background: '#0066A2', color: '#fff', border: 'none', padding: '8px 16px', margin: '0 5px'  }}>Email</button>
       </div>
 
       {isMenuOpen && (
