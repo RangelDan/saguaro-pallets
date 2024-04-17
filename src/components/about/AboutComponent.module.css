@@ -1,0 +1,56 @@
+/* pages/About.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heroImage {
+  background-image: url('/About.jpg'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust height for smaller screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* White text */
+}
+
+.hero, .mission, .history, .testimonials {
+  margin-bottom: 40px;
+}
+
+.h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Better readability on any background */
+  color: #fff; /* Ensures the title is white */
+  padding: 0 20px; /* Adds padding on smaller screens */
+}
+
+.h2 {
+  color: #004080; /* Slightly lighter blue */
+}
+
+.testimonial {
+  background-color: #f0f0f0; /* Light grey background for testimonials */
+  border-left: 5px solid #003366; /* Dark blue border on the left */
+  margin: 20px 0;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .heroImage {
+    height: 200px; /* Smaller hero image on mobile */
+  }
+
+  .h1, .h2 {
+    font-size: 24px; /* Smaller font size on mobile */
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .testimonial {
+    font-size: 14px; /* Smaller font size for testimonials on mobile */
+  }
+}

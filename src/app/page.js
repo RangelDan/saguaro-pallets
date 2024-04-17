@@ -7,6 +7,7 @@ import ContactForm from '@/components/contactform/ContactForm';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import ImageSlider from '@/components/imageslider/ImageSlider';
+import FeatureSection from '@/components/featureSection/FeatureSection';
 
 export default function Home() {
 
@@ -16,6 +17,23 @@ export default function Home() {
     { src: '/loaded.jpg', alt: 'Description of Image 3' },
     // Add more images as needed
   ];
+  const features = [
+    {
+      image: '/top1.jpg',
+      title: 'We supply',
+      description: 'Description for feature one...'
+    },
+    {
+      image: '/top2.jpg',
+      title: 'We buy',
+      description: 'Description for feature two...'
+    },
+    {
+      image: '/top3.jpg',
+      title: 'Custom jobs',
+      description: 'Description for feature three...'
+    }
+  ];
 
   return (
     <Layout>
@@ -23,10 +41,8 @@ export default function Home() {
       {/* <Navbar /> */}
       <HeroSection />
       <CenterTextSection />
-      <ImageSlider images={images}/>
-      <ImageSection />
+      <FeatureSection features={features} />
       <CallToAction />
-      <ContactForm />
       {/* <Footer /> */}
     {/* </div> */}
     </Layout>

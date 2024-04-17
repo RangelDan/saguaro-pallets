@@ -6,7 +6,7 @@ const ContactForm = () => (
       textAlign: 'center',
       boxSizing: 'border-box',
     }}>
-      <h2>Contact Us</h2>
+      <h2 style={{fontSize: '2rem'}}>Contact us</h2>
       <form action="/submit_form" method="POST" style={{ textAlign: 'center' }}>
         <input type="text" name="name" placeholder="Your Name" required style={{
           width: '90%', margin: '10px 0', padding: '10px'
@@ -19,7 +19,7 @@ const ContactForm = () => (
         }}></textarea>
         <button type="submit" style={{
           padding: '10px 20px', backgroundColor: '#0066A2', color: 'white', border: 'none', cursor: 'pointer'
-        }}>Send Message</button>
+        }}>Send message</button>
       </form>
     </div>
   );

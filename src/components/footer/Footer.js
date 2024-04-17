@@ -1,7 +1,7 @@
 // components/Footer.js
 const Footer = () => (
     <footer style={{
-      backgroundColor: '#333',
+      backgroundColor: 'black',
       color: 'white',
       textAlign: 'center',
       padding: '20px',
