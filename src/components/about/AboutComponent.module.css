@@ -6,7 +6,7 @@
 }
 
 .heroImage {
-  background-image: url('/About.jpg'); /* Update with your image path */
+  background-image: url('/aboutsplash.jpg'); /* Update with your image path */
   background-size: cover;
   background-position: center;
   height: 300px; /* Adjust height for smaller screens */
@@ -22,8 +22,8 @@
 
 .h1 {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Better readability on any background */
-  color: #fff; /* Ensures the title is white */
-  padding: 0 20px; /* Adds padding on smaller screens */
+  color: black; /* Ensures the title is white */
+  padding: 0 0; /* Adds padding on smaller screens */
 }
 
 .h2 {

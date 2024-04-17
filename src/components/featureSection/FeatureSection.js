@@ -1,13 +1,20 @@
 import React from 'react';
 import styles from './FeatureSection.module.css';
 
-const Card = ({ image, title, description }) => (
-  <div className={styles.card}>
-    <img src={image} alt={title} className={styles.cardImage} />
-    <h3>{title}</h3>
-    <p>{description}</p>
-  </div>
-);
+const Card = ({ image, title, description, id }) => {
+  // Correct usage of dynamic link with template literals
+  const targetdest = `/services#${id}`;
+  return (
+    <div className={styles.card}>
+      {/* Correct usage of the dynamic destination in the href attribute */}
+        <img src={image} alt={title} className={styles.cardImage} />
+        <a href={targetdest} style={{textDecoration: 'none'}}>
+          <h3 style={{color: 'black', fontSize: '24px'}}>{title}</h3>
+        </a>
+        <p>{description}</p>
+    </div>
+  );
+};
 
 const FeatureSection = ({ features }) => (
   <div className={styles.container}>

@@ -21,17 +21,20 @@ export default function Home() {
     {
       image: '/top1.jpg',
       title: 'We supply',
-      description: 'Description for feature one...'
+      description: 'Description for feature one...',
+      id: 'wesupply'
     },
     {
       image: '/top2.jpg',
       title: 'We buy',
-      description: 'Description for feature two...'
+      description: 'Description for feature two...',
+      id: 'webuy'
     },
     {
       image: '/top3.jpg',
       title: 'Custom jobs',
-      description: 'Description for feature three...'
+      description: 'Description for feature three...',
+      id: 'custom'
     }
   ];
 

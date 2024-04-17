@@ -4,12 +4,12 @@ import styles from './AboutComponent.module.css';
 
 const AboutComponent = () => (
   <div className={styles.container}>
-    <div className={styles.heroImage}>
-      <h1 className={styles.h1}>About Us</h1>
-    </div>
     <section className={styles.hero}>
+      <h1 className={styles.h1}>About Us</h1>
       <p>We are a family-owned pallet company proudly serving Arizona for over two decades.</p>
     </section>
+    <div className={styles.heroImage}>
+    </div>
     
     <section className={styles.mission}>
       <h2 className={styles.h2}>Our Mission</h2>
