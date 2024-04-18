@@ -34,20 +34,16 @@ export default function Home() {
       image: '/top3.jpg',
       title: 'Custom jobs',
       description: 'Description for feature three...',
-      id: 'custom'
+      id: 'wesupply'
     }
   ];
 
   return (
     <Layout>
-    {/* <div> */}
-      {/* <Navbar /> */}
       <HeroSection />
       <CenterTextSection />
       <FeatureSection features={features} />
       <CallToAction />
-      {/* <Footer /> */}
-    {/* </div> */}
     </Layout>
   );
 }

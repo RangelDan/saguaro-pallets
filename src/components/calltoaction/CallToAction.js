@@ -1,4 +1,5 @@
-// components/CallToAction.js
+'use client'
+
 const CallToAction = () => (
     <div style={{
       textAlign: 'center',
@@ -8,7 +9,12 @@ const CallToAction = () => (
     }}>
       <h1 style={{fontSize: '3rem'}}>Call now for a free quote!</h1>
       <h2 style={{fontSize: '2rem'}}>Best Prices Guaranteed</h2>
-      <button style={{fontSize: '18px', padding: '10px 20px'}}>Call Now</button>
+      <button 
+        style={{fontSize: '18px', padding: '10px 20px'}} 
+        onClick={() => window.location.href = 'tel:+1234567890'}
+      >
+        Call Now
+      </button>
     </div>
   );
   

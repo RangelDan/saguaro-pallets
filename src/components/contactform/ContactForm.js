@@ -1,5 +1,53 @@
-// components/ContactForm.js
-const ContactForm = () => (
+'use client'
+
+import React, { useState } from 'react';
+
+const ContactForm = () => {
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const maxLength = 600; // max length of message field validation
+  const remainingChar = maxLength - formData.message.length;
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    let res = null;
+    try {
+      res = await sendEmail(formData);
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+
+    if (res === 'success') {
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+      setIsSuccess(true);
+      setError(false);
+      console.log(res);
+    } else {
+      setError(res);
+      setIsSuccess(false);
+      console.log(res);
+    }
+  };
+
+  return (
     <div style={{
       background: '#f8f8f8',
       padding: '20px',
@@ -12,6 +60,16 @@ const ContactForm = () => (
           type="text" 
           name="name" 
           placeholder="Your Name" 
+          required style={{
+            width: '90%', 
+            margin: '10px 0', 
+            padding: '10px'
+          }} 
+        />
+        <input 
+          type="phone" 
+          name="phone" 
+          placeholder="Your Phone" 
           required style={{
             width: '90%', 
             margin: '10px 0', 
@@ -50,6 +108,7 @@ const ContactForm = () => (
       </form>
     </div>
   );
+}
   
   export default ContactForm;
   
