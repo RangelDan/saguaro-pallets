@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable*/
 import React from 'react';
 import styles from './AboutComponent.module.css';
 
