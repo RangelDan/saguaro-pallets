@@ -11,29 +11,23 @@ import FeatureSection from '@/components/featureSection/FeatureSection';
 
 export default function Home() {
 
-  const images = [
-    { src: '/loaded.jpg', alt: 'Description of Image 1' },
-    { src: '/loaded.jpg', alt: 'Description of Image 2' },
-    { src: '/loaded.jpg', alt: 'Description of Image 3' },
-    // Add more images as needed
-  ];
   const features = [
     {
       image: '/top1.jpg',
       title: 'We supply',
-      description: 'Description for feature one...',
+      description: 'We offer a wide range of sizes including 48x40, 48x48, and custom sizes to meet your needs.',
       id: 'wesupply'
     },
     {
       image: '/top2.jpg',
       title: 'We buy',
-      description: 'Description for feature two...',
+      description: 'Looking to sell your used pallets? We buy them back at competitive prices.',
       id: 'webuy'
     },
     {
       image: '/top3.jpg',
       title: 'Custom jobs',
-      description: 'Description for feature three...',
+      description: 'We offer weekly pallet and cardboard bale pickup at no cost, helping you keep your operations smooth and efficient.',
       id: 'wesupply'
     }
   ];

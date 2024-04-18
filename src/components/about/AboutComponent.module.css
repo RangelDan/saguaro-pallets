@@ -21,9 +21,10 @@
 }
 
 .h1 {
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Better readability on any background */
   color: black; /* Ensures the title is white */
   padding: 0 0; /* Adds padding on smaller screens */
+  font-size: 28px; 
+
 }
 
 .h2 {
@@ -42,7 +43,10 @@
     height: 200px; /* Smaller hero image on mobile */
   }
 
-  .h1, .h2 {
+  .h1{
+    font-size: 28px; 
+  } 
+  .h2 {
     font-size: 24px; /* Smaller font size on mobile */
   }
 

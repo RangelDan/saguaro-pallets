@@ -72,7 +72,7 @@
   }
 
   .button:hover {
-      background-color: rgba(0, 0, 0, 0.4); /* Darken on hover for better interaction feedback */
+      background-color: rgba(0, 0, 0, 0.4); 
   }
 
   .contentLayer {
