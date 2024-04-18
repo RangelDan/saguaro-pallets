@@ -1,7 +1,10 @@
+import React from 'react';
 import Image from 'next/image';
 import styles from './HeroSection.module.css';
 
-const HeroSection = () => (
+const HeroSection = () => {
+  
+  return(
   <div className={styles.heroContainer}>
     <div className={styles.backgroundImage}>
       <Image
@@ -16,11 +19,11 @@ const HeroSection = () => (
     <div className={styles.contentLayer}>
       <h1 className={styles.title}>Saguaro Pallets</h1>
       <p className={styles.subtitle}>High Quality • Sustainable • Affordable</p>
-      <button className={styles.button}>
+      <a className={styles.button} href='/contact'>
         Learn More
-      </button>
+      </a>
     </div>
-  </div>
-);
+  </div>)
+};
 
 export default HeroSection;
