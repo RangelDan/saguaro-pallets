@@ -1,12 +1,7 @@
 import CenterTextSection from '@/components/centertextsection/CenterTextSection';
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/herosection/HeroSection';
-import ImageSection from '@/components/imagesection/ImageSection';
 import CallToAction from '@/components/calltoaction/CallToAction';
-import ContactForm from '@/components/contactform/ContactForm';
-import Navbar from '@/components/navbar/Navbar';
-import Footer from '@/components/footer/Footer';
-import ImageSlider from '@/components/imageslider/ImageSlider';
 import FeatureSection from '@/components/featureSection/FeatureSection';
 
 export default function Home() {
