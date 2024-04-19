@@ -1,20 +1,31 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react';
 import styles from './Navbar.module.css'
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-  const closeMenu = () => {
-    setMenuOpen(false);
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target) && isMenuOpen) {
+      setMenuOpen(false); // Close the menu if click is outside
+    }
   };
 
   return (
-    <div className={styles.navbar} onMouseOut={closeMenu}>
+    <div className={styles.navbar}>
       <a href='/'>
         <img src="/saglogo.png" alt="Saguaro Pallets - Buy and sell" style={{height: '100px', width: '100px'}} />
       </a>
@@ -48,7 +59,7 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className={styles.mobileMenu}>
+        <div className={styles.mobileMenu} ref={menuRef}>
           <a href="/about" style={{ display: 'block', padding: '10px 20px', textDecoration: 'none', color: '#0066A2' }}>About</a>
           <a href="/services" style={{ display: 'block', padding: '10px 20px', textDecoration: 'none', color: '#0066A2' }}>Services</a>
           <a href="/contact" style={{ display: 'block', padding: '10px 20px', textDecoration: 'none', color: '#0066A2' }}>Contact</a>
