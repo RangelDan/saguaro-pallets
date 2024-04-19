@@ -1,7 +1,7 @@
 import React from "react";
 import emailjs from "@emailjs/browser";
-import DOMPurify from 'dompurify'; // Import DOMPurify for input sanitization
-import { validateEmail, validateMessage, validateName } from '@/utils/validation'
+import DOMPurify from 'dompurify';
+import { validateEmail, validateMessage, validateName, validatePhone } from '@/utils/validation'
 
 const sendEmail = async (formData, csrfToken) => {
   const serviceId = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
@@ -11,13 +11,14 @@ const sendEmail = async (formData, csrfToken) => {
 
   try {
     // Validate form data
-    if (!formData || !formData.name || !formData.email || !formData.message) {
+    if (!formData || !formData.name || !formData.message  || !formData.phone) {
       return 'Incomplete form data';
     }
     
     const emailValidMsg = validateEmail(formData.email)
     const nameValidMsg = validateName(formData.name)
     const mesgValidMsg = validateMessage(formData.message)
+    const phoneValidMsg = validatePhone(formData.phone)
 
     if (emailValidMsg != null) {
       return emailValidMsg
@@ -27,6 +28,9 @@ const sendEmail = async (formData, csrfToken) => {
     } 
     if (mesgValidMsg != null) {
       return mesgValidMsg
+    } 
+    if (phoneValidMsg != null) {
+      return phoneValidMsg
     } 
 
 
@@ -50,7 +54,8 @@ const sendEmail = async (formData, csrfToken) => {
     };
 
     // Send the email
-    await emailjs.send(emailParams.serviceID, emailParams.templateID, emailParams.templateParams, emailParams.publicKey);
+    // UNCOMMENT WHEN EMAILJS IS SET UP
+    // await emailjs.send(emailParams.serviceID, emailParams.templateID, emailParams.templateParams, emailParams.publicKey);
 
     console.log('Email sent successfully!');
     return 'success'

@@ -1,12 +1,14 @@
 'use client'
 
 import React, { useState } from 'react';
+import sendEmail from '@/utils/sendEmail';
 
 const ContactForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
+    phone: '',
     email: '',
     message: '',
   });
@@ -26,6 +28,7 @@ const ContactForm = () => {
 
     let res = null;
     try {
+      console.log(formData)
       res = await sendEmail(formData);
     } catch (error) {
       console.error('Error sending email:', error);
@@ -34,6 +37,7 @@ const ContactForm = () => {
     if (res === 'success') {
       setFormData({
         name: '',
+        phone: '',
         email: '',
         message: '',
       });
@@ -60,6 +64,7 @@ const ContactForm = () => {
           type="text" 
           name="name" 
           placeholder="Your Name" 
+          onChange={handleChange}
           required style={{
             width: '90%', 
             margin: '10px 0', 
@@ -70,6 +75,7 @@ const ContactForm = () => {
           type="phone" 
           name="phone" 
           placeholder="Your Phone" 
+          onChange={handleChange}
           required style={{
             width: '90%', 
             margin: '10px 0', 
@@ -80,6 +86,7 @@ const ContactForm = () => {
           type="email" 
           name="email" 
           placeholder="Your Email" 
+          onChange={handleChange}
           required style={{
             width: '90%', 
             margin: '10px 0', 
@@ -89,14 +96,20 @@ const ContactForm = () => {
         <textarea 
           name="message" 
           placeholder="Your Message" 
+          onChange={handleChange}
           required style={{
             width: '90%', 
-            margin: '10px 0', 
+            margin: '10px 0 0 0', 
             padding: '10px',
             height: '200px'
           }}
         />
-        <button type="submit" style={{
+        <p style={{fontSize: '14px'}}>{remainingChar}/{maxLength}</p>
+        {!isSuccess && 
+        <button 
+          onClick={handleSubmit}
+          type="submit" 
+          style={{
           padding: '10px 20px', 
           backgroundColor: '#0066A2', 
           color: 'white', 
@@ -104,7 +117,15 @@ const ContactForm = () => {
           cursor: 'pointer'
         }}>
           Send message
-        </button>
+        </button>}
+        {isSuccess && 
+        <p>
+          Thank you for your message! We have received it successfully. One of our representatives will contact you shortly.
+        </p>}
+        {error && 
+        <p style={{ color: 'red'}}>
+          {error}
+        </p>}
       </form>
     </div>
   );
