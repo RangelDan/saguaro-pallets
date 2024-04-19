@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className={styles.buttons}>
         <button 
           style={{ background: '#0066A2', color: '#fff', border: 'none', padding: '8px 16px', margin: '0 5px' }}
-          onClick={() => window.location.href = 'tel:+1234567890'}
+          onClick={() => window.location.href = 'tel:+4804695678'}
         >
           Call Now
         </button>

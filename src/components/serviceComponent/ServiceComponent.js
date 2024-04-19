@@ -66,7 +66,7 @@ const ServiceComponent = () => (
     </section>
 
     <div className={styles.callNow}>
-      <button onClick={() => window.location.href = 'tel:+1234567890'}>
+      <button onClick={() => window.location.href = 'tel:+4804695678'}>
         Call Now
       </button>
     </div>
