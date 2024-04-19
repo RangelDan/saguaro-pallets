@@ -9,9 +9,12 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
-    <div className={styles.navbar}>
+    <div className={styles.navbar} onMouseOut={closeMenu}>
       <a href='/'>
         <img src="/saglogo.png" alt="Saguaro Pallets - Buy and sell" style={{height: '100px', width: '100px'}} />
       </a>
@@ -36,7 +39,7 @@ const Navbar = () => {
           style={{ background: '#0066A2', color: '#fff', border: 'none', padding: '8px 16px', margin: '0 5px'  }}
           onClick={() => {
             const subject = encodeURIComponent("I'm intrested in your services!");
-            const body = encodeURIComponent("This is a prepopulated body.\nYou can add line breaks and more details as needed.");
+            const body = encodeURIComponent("I was just on your site and I want to learn more!");
             window.location.href = `mailto:saguaropallets@gmail.com?subject=${subject}&body=${body}`;
           }}
         >
@@ -50,6 +53,12 @@ const Navbar = () => {
           <a href="/services" style={{ display: 'block', padding: '10px 20px', textDecoration: 'none', color: '#0066A2' }}>Services</a>
           <a href="/contact" style={{ display: 'block', padding: '10px 20px', textDecoration: 'none', color: '#0066A2' }}>Contact</a>
           <a href="/gallery" style={{ display: 'block', padding: '10px 20px', textDecoration: 'none', color: '#0066A2' }}>Gallery</a>
+          <a href="tel:+14804695678" style={{ display: 'block', padding: '10px 20px', textDecoration: 'none', color: '#0066A2' }}>Call Now</a>
+          <a 
+            href="mailto:saguaropallets@gmail.com?subject=I'm%20intrested%20in%20your%20services!&body=I%20was%20just%20on%20your%20site%20and%20I%20want%20to%20learn%20more!"
+            style={{ display: 'block', padding: '10px 20px', textDecoration: 'none', color: '#0066A2' }}>
+            Email
+          </a>
         </div>
       )}
     </div>
