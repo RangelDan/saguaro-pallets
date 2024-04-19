@@ -11,7 +11,7 @@ const CallToAction = () => (
       <h2 style={{fontSize: '2rem'}}>Best Prices Guaranteed</h2>
       <button 
         style={{fontSize: '18px', padding: '10px 20px'}} 
-        onClick={() => window.location.href = 'tel:+4804695678'}
+        onClick={() => window.location.href = 'tel:+14804695678'}
       >
         Call Now
       </button>
