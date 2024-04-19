@@ -5,10 +5,7 @@ import styles from './GalleryComponent.module.css';
 import imageData from '../../data/galleryData'
 
 const GalleryComponent = () => {
-    const [images, setImages] = useState(imageData);
     const [selectedImg, setSelectedImg] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
 
     const openModal = (imgSrc) => {
         setSelectedImg(imgSrc);
@@ -18,17 +15,9 @@ const GalleryComponent = () => {
         setSelectedImg(null);
     };
 
-    if (error) {
-        return <div>Error loading images: {error}</div>;
-    }
-
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
     return (
         <div className={styles.container}>
-            {images.map((image, index) => (
+            {imageData.map((image, index) => (
                 <img
                     key={index}
                     src={image.src}
