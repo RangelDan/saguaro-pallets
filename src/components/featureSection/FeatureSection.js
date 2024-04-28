@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './FeatureSection.module.css';
+import Image from 'next/image';
 
 const Card = ({ image, title, description, id }) => {
   // Correct usage of dynamic link with template literals
@@ -7,7 +8,15 @@ const Card = ({ image, title, description, id }) => {
   return (
     <div className={styles.card}>
       {/* Correct usage of the dynamic destination in the href attribute */}
-        <img src={image} alt={title} className={styles.cardImage} />
+        {/* <img src={image} alt={title} className={styles.cardImage} /> */}
+        <Image
+          src={image}
+          className={styles.cardImage}          
+          alt={title}
+          width={400}
+          height={400}
+          objectFit="cover"
+        />
         <a href={targetdest} style={{textDecoration: 'none'}}>
           <h3 style={{color: '#0066A2', fontSize: '24px', marginBottom: '0'}}>{title}</h3>
         </a>
