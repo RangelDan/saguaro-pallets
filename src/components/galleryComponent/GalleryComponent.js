@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import styles from './GalleryComponent.module.css';
 import imageData from '../../data/galleryData'
+import Image from 'next/image';
 
 const GalleryComponent = () => {
     const [selectedImg, setSelectedImg] = useState(null);
@@ -18,12 +19,17 @@ const GalleryComponent = () => {
     return (
         <div className={styles.container}>
             {imageData.map((image, index) => (
-                <img
+                
+                <Image
+                    className={styles.thumbnail}
                     key={index}
                     src={image.src}
                     alt={image.alt}
-                    className={styles.thumbnail}
                     onClick={() => openModal(image.src)}
+                    
+                    width={400}
+                    height={400}
+                    objectFit="cover"
                 />
             ))}
 
