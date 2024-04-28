@@ -39,6 +39,7 @@ const sendEmail = async (formData, csrfToken) => {
       from_name: sanitizeInput(formData.name),
       message: sanitizeInput(formData.message),
       from_email: sanitizeInput(formData.email),
+      phone_number: sanitizeInput(formData.phone),
     };
 
     // Protect against CSRF
@@ -55,7 +56,7 @@ const sendEmail = async (formData, csrfToken) => {
 
     // Send the email
     // UNCOMMENT WHEN EMAILJS IS SET UP
-    // await emailjs.send(emailParams.serviceID, emailParams.templateID, emailParams.templateParams, emailParams.publicKey);
+    await emailjs.send(emailParams.serviceID, emailParams.templateID, emailParams.templateParams, emailParams.publicKey);
 
     console.log('Email sent successfully!');
     return 'success'
