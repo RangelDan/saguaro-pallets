@@ -21,7 +21,15 @@ const ServiceComponent = () => (
           to minimize environmental impact.        
         </p>
       </div>
-      <img src="/service1.jpg" alt="Pallets for Sale" className={styles.serviceImage}/>
+      {/* <img src="/service1.jpg" alt="Pallets for Sale" className={styles.serviceImage}/> */}
+      <Image
+          src='/service1.jpg'
+          alt="Pallets for Sale"
+          width={400}
+          height={400}
+          className={styles.serviceImage}
+          objectFit="cover"
+        />
     </section>
     
     <section className={styles.service} id='webuy'>
@@ -34,7 +42,15 @@ const ServiceComponent = () => (
           Whether you have a small quantity or a large stock, our team is ready to provide quick evaluations and prompt payments.        
         </p>
       </div>
-      <img src="/top2.jpg" alt="Buying Pallets" className={styles.serviceImage}/>
+      {/* <img src="/top2.jpg" alt="Buying Pallets" className={styles.serviceImage}/> */}
+      <Image
+          src="/top2.jpg"
+          alt="Buying Pallets"
+          width={400}
+          height={400}
+          className={styles.serviceImage}
+          objectFit="cover"
+        />
     </section>
     
     <section className={styles.service} id="custom">
@@ -48,7 +64,15 @@ const ServiceComponent = () => (
           offering an eco-friendly and cost-effective solution to your logistics needs.
         </p>
       </div>
-      <img src="/serv3.jpg" alt="Pallet Repair" className={styles.serviceImage}/>
+      {/* <img src="/serv3.jpg" alt="Pallet Repair" className={styles.serviceImage}/> */}
+      <Image
+          src="/serv3.jpg"
+          alt="Pallet Repair"
+          width={400}
+          height={400}
+          className={styles.serviceImage}
+          objectFit="cover"
+        />
     </section>
     
     <section className={styles.service}>
@@ -63,7 +87,15 @@ const ServiceComponent = () => (
           responsible manner, contributing to your company's green initiatives.
         </p>
       </div>
-      <img src="/serv4.jpg" alt="Logistics Services" className={styles.serviceImage}/>
+      {/* <img src="/serv4.jpg" alt="Logistics Services" className={styles.serviceImage}/> */}
+      <Image
+          src="/serv4.jpg"
+          alt="Logistics Services"
+          width={400}
+          height={400}
+          className={styles.serviceImage}
+          objectFit="cover"
+        />
     </section>
 
     <div className={styles.callNow}>
