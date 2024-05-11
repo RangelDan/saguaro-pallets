@@ -114,7 +114,8 @@ const ContactForm = () => {
           backgroundColor: '#0066A2', 
           color: 'white', 
           border: 'none', 
-          cursor: 'pointer'
+          cursor: 'pointer',
+          fontSize: '18px'
         }}>
           Send message
         </button>}
