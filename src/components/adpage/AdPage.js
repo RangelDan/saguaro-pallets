@@ -10,7 +10,7 @@ const AdPage = () => {
             <div className={styles.imageContainer}>
                 <Image
                     src="/type4-1.jpg" // Update this path to your image location
-                    alt="Saguaro Pallets"
+                    alt="Saguaro Pallets - Free Delivery"
                     width={500}  // Set your desired width
                     height={300} // Set your desired height
                     layout="intrinsic" // This keeps the image at the specified dimensions
