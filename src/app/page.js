@@ -25,7 +25,7 @@ export default function Home() {
       image: '/top3.jpg',
       title: 'Custom Jobs',
       description: 'We offer weekly pallet and cardboard bale pickup at no cost, keeping your operations smooth and efficient.',
-      id: 'wesupply'
+      id: 'log'
     }
   ];
 
