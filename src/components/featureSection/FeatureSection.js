@@ -7,8 +7,6 @@ const Card = ({ image, title, description, id }) => {
   const targetdest = `/services#${id}`;
   return (
     <div className={styles.card}>
-      {/* Correct usage of the dynamic destination in the href attribute */}
-        {/* <img src={image} alt={title} className={styles.cardImage} /> */}
         <Image
           src={image}
           className={styles.cardImage}          
@@ -18,9 +16,9 @@ const Card = ({ image, title, description, id }) => {
           objectFit="cover"
         />
         <a href={targetdest} style={{textDecoration: 'none'}}>
-          <h3 style={{color: '#0066A2', fontSize: '24px', marginBottom: '0'}}>{title}</h3>
+          <h3 style={{color: '#0066A2', fontSize: '2rem', marginBottom: '0'}}>{title}</h3>
         </a>
-        <p>{description}</p>
+        <p style={{fontSize: '20px'}}>{description}</p>
     </div>
   );
 };
