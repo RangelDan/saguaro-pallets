@@ -8,6 +8,7 @@ const FirstAd = () => {
         <div className={styles.container}>
             <div className={styles.header}>
                 <h1>SAGUARO PALLETS</h1>
+                <hr />
             </div>
             <div className={styles.content}>
                 <p className={styles.subhead}><strong>Need pallets for your business?</strong></p>
