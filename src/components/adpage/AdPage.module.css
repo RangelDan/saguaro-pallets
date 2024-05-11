@@ -32,8 +32,8 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-out;
+    transform: translateY(50px); /* Start from a slightly greater distance */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smoother and slower transition */
 }
 
 .wrapper.visible {
@@ -52,8 +52,8 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
         opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.5s ease-out;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
     .wrapper.visible {
         opacity: 1;
