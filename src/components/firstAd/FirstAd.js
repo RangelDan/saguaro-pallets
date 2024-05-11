@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import styles from './FirstAd.module.css';
 
@@ -17,11 +19,12 @@ const FirstAd = () => {
                     <li>Custom sizes available</li>
                 </ul>
                 <button 
-                    style={{fontSize: '18px', padding: '10px 20px'}} 
-                    // onClick={() => window.location.href = 'tel:+14804695678'}
-                >
-                    Text Now
-                </button>
+    style={{fontSize: '18px', padding: '10px 20px'}} 
+    onClick={() => window.location.href = 'sms:+14804695678?body=I\'m interested in your pallets'}
+>
+    Text Now
+</button>
+
             </div>
         </div>
     );
